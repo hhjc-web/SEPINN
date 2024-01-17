@@ -2,7 +2,7 @@ Singularity-enriched physics-informed neural network(SEPINN)
 
 These examples are for the article "Solving Possion problems in polygonal domains with singularity enriched physics neural network".
 
-SEPINN for 2-d problem:
+SEPINN for 2-d problem: (Example 1 and Exmaple 2)
 
 1. Data Prep
 In this part we create the domain, either L-shaped or rectangle domain.
@@ -22,6 +22,12 @@ test: to test the model
 5. Loss Function
 The main part of the model. In this part, we give the sampling points, the network structure, and put them into the model to train.
 
-SEPINN for 3-d problem: The 3-d problem is very similar to 2-d one, we only mention some model differences.
+SEPINN for 3-d problem: (Example 3 and Exmaple 4) 
+
+The 3-d problem is very similar to 2-d one, we only mention some model differences.
 SEPINN-cutoff:  In _init_ function, the lambdah should be a vector with the length you want to cut off.
 SEPINN-nn: In _init_ function, we use linears to represent the parameters of v and linears0 to represent the parameters of \PHi.
+
+SEPINN for eigenvalue problem:
+
+We use SEPINN to solve eigenvalue problem in L-shped doamin in Example 5, where you can find the formulation of loss function in our article. rayleigh1 and rayleigh2 are two rayleigh quotients for each eigenfunction. In our experiments we only use loss but not loss_new. loss_new function is contained in closure where we tested for L-BFGS optimizer.
