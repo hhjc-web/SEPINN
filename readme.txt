@@ -2,6 +2,20 @@ Singularity-enriched physics-informed neural network(SEPINN)
 
 These examples are for the article "Solving Possion problems in polygonal domains with singularity enriched physics neural network".
 
+Environment requirements:
+
+1. Set up Anaconda at: https://www.anaconda.com/
+2. Build Python environment
+3. Creating a Virtual Environment by running 
+conda create -n env_name python=3.10 (python version)
+4. Download environment.txt and running
+pip install -r environment.txt
+to the environment you create.
+
+Then you may run the programme on Jupyter notebook.
+
+Comments for the code:
+
 SEPINN for 2-d problem: (Example 1 and Exmaple 2)
 
 1. Data Prep
